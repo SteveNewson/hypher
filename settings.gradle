@@ -1,0 +1,3 @@
+rootProject.name = 'hypher'
+includeBuild 'plugins/language-generator'
+

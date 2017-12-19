@@ -1,0 +1,24 @@
+apply plugin: 'java-gradle-plugin'
+apply plugin: 'java'
+
+repositories {
+  mavenLocal()
+  mavenCentral()
+  jcenter()
+}
+
+dependencies {
+  compile 'com.google.code.gson:gson:2.8.2'
+}
+
+group = 'net.bitbadger.hypher.plugin.language'
+version = '1.0-SNAPSHOT'
+
+gradlePlugin {
+  plugins {
+    customPlugin {
+      id = 'net.bitbadger.hypher.plugin.language.generator'
+      implementationClass = 'net.bitbadger.hypher.plugin.language.GeneratorPlugin'
+    }
+  }
+}
